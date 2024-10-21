@@ -2,7 +2,7 @@
 
 | *Figure 1: Robot schematics for joint angles (0°,0°,0°,-60°,0°,0°,0°)* | 
 | ------- |
-| ![output](https://github.com/user-attachments/assets/3a592516-dcf2-44df-b39a-23bbd749714e) |
+|![image](https://github.com/user-attachments/assets/66defe73-baf4-4a0f-9a03-f82e63e3cd21)|
 
 ## Abstract
 
@@ -90,7 +90,7 @@ The training dataset was created by randomly generating angles for each joint wi
 
 | *Figure 2: Distribution of points in the generated dataset* | 
 | ------- |
-| ![image](https://github.com/user-attachments/assets/73be855f-1c28-4e5c-af10-cdda7c0cb36b) |
+| ![image](https://github.com/user-attachments/assets/3a68fed7-a9d8-4025-9e86-3d66445d59b1)|
 
 ### Hyper-parameter iteration and selection
 This subsection explores the variation of multiple hyperparameters for each optimization and machine learning algorithm while maintaining the other parameters constant. The impact of these changes on the MAE value was monitored. Subsequently, the most effective estimator for each category was identified based on the hyperparameter configurations that resulted in the lowest MAE values.
@@ -98,48 +98,48 @@ This subsection explores the variation of multiple hyperparameters for each opti
 **Genetic Algorithm**
 | Comment | Illustration |
 | ------- | ------------ |
-| Varying the population size showed minimal MAE variation within population sizes of 50 to 200, but a significant increase was observed within the range of 10 to 50. **A population of 200 was selected.** | ![image](https://github.com/user-attachments/assets/bcc1b055-e91a-4b96-8e9b-dc24c700bdd2) |
-| When varying the maximum iteration count, **a value of 50 was chosen.** Beyond 30, increasing the maximum iteration did not significantly affect the MAE. | ![image](https://github.com/user-attachments/assets/43781bd6-047b-4834-8696-4ef1907de157) |
-| For the mutation probability, **a value of 0.1 was selected.** The trend observed indicated that the MAE value increased as the mutation probability increased. | ![image](https://github.com/user-attachments/assets/8634c8a7-a2dc-4a86-b257-321fb0fa391a) |
+| Varying the population size showed minimal MAE variation within population sizes of 50 to 200, but a significant increase was observed within the range of 10 to 50. **A population of 200 was selected.** | ![image](https://github.com/user-attachments/assets/8f47171f-c84e-493d-b210-2a629b644fa7)|
+| When varying the maximum iteration count, **a value of 50 was chosen.** Beyond 30, increasing the maximum iteration did not significantly affect the MAE. | ![image](https://github.com/user-attachments/assets/7e1abc46-68a3-4890-adab-b250c755f5b0)|
+| For the mutation probability, **a value of 0.1 was selected.** The trend observed indicated that the MAE value increased as the mutation probability increased. | ![image](https://github.com/user-attachments/assets/2ae14a10-f714-4a5d-a6cd-4a83e909c3ba)|
 
 **Differential Evolution**
 | Comment | Illustration |
 | ------- | ------------ |
-| Keeping other parameters constant while varying the population size led to **a value of 200 being selected.** Lower MAE values were obtained for higher population sizes. | ![image](https://github.com/user-attachments/assets/4526bb9f-9759-4793-8021-d68a2f6fb971) |
-| Variations in the maximum iteration count showed no effect on the MAE value. **A value of 50 was selected.** | ![image](https://github.com/user-attachments/assets/c0a9e46c-17dc-4f92-9f57-0a22008d737d) |
-| A mutation probability closer to 1 resulted in lower MAE values. **A value of 0.9 was selected.** | ![image](https://github.com/user-attachments/assets/e5be50c3-eb91-4563-bd2b-2ff6ea9d49dc) |
+| Keeping other parameters constant while varying the population size led to **a value of 200 being selected.** Lower MAE values were obtained for higher population sizes. |![image](https://github.com/user-attachments/assets/d0d35cd9-3018-451d-a911-12f3e92a92fb)|
+| Variations in the maximum iteration count showed no effect on the MAE value. **A value of 50 was selected.** | ![image](https://github.com/user-attachments/assets/85ba4e0b-e3b6-40be-b8d6-18cdc8ceda2f)|
+| A mutation probability closer to 1 resulted in lower MAE values. **A value of 0.9 was selected.** | ![image](https://github.com/user-attachments/assets/e1bab322-41f7-45a5-9a60-23cfc2fac57b)|
 
 **Particle Swarm Optimization**
 | Comment | Illustration |
 | ------- | ------------ |
-| Increasing the population size resulted in lower MAE values. **A size of 200 was selected.** | ![image](https://github.com/user-attachments/assets/28491a6e-b96c-40c5-8508-fa957cf18f87) |
-| Higher maximum iteration values correlated with lower MAE values, with minimal improvement noted beyond a **maximum iteration count of 100.** | ![image](https://github.com/user-attachments/assets/8bf71960-1bde-4450-a668-23c7584a710e) |
-| Variations in the inertia parameter did not affect the MAE value. **An inertia of 0.1 was selected.** | ![image](https://github.com/user-attachments/assets/c3916a0b-5d3a-428b-a4ab-4a8f887ab45f) |
-| The social parameter exhibited slight variations with the cognitive parameter. Optimal social parameter values with lower MAE were found between 0.5 and 0.6. **A social parameter of 0.5 and a cognitive parameter of 0.25 were selected.** | ![image](https://github.com/user-attachments/assets/54d2c0b2-e1c8-4b5b-8125-a1458fbc00a0) |
+| Increasing the population size resulted in lower MAE values. **A size of 200 was selected.** | ![image](https://github.com/user-attachments/assets/8d0bbeda-c5c5-417f-9df6-8285606ff8f6)|
+| Higher maximum iteration values correlated with lower MAE values, with minimal improvement noted beyond a **maximum iteration count of 100.** | ![image](https://github.com/user-attachments/assets/0f73d0c1-ffa4-4cee-b1f8-5285a9e3fd3f)|
+| Variations in the inertia parameter did not affect the MAE value. **An inertia of 0.1 was selected.** | ![image](https://github.com/user-attachments/assets/b7f47d98-c9dd-46ee-b1f5-b3e161be4e91)|
+| The social parameter exhibited slight variations with the cognitive parameter. Optimal social parameter values with lower MAE were found between 0.5 and 0.6. **A social parameter of 0.5 and a cognitive parameter of 0.25 were selected.** | ![image](https://github.com/user-attachments/assets/fdf9589d-fe02-4be2-b42d-6454739ac643)|
 
 **Simulated Annealing**
 | Comment | Illustration |
 | ------- | ------------ |
-| Higher iteration counts resulted in lower MAE values. **An iteration count of 200 was chosen.** | ![image](https://github.com/user-attachments/assets/d7abf6e6-9c07-47fc-a7cb-21ac491570cc) |
-| Lower minimum temperature values led to lower MAE values. Beyond 0.1, the MAE value remained steady. The maximum temperature range of 10 to 500 had a similar effect on the MAE. **A minimum temperature of 0.00001 and a maximum temperature of 100 were chosen.** | ![image](https://github.com/user-attachments/assets/6fe7cd4f-1d83-41d0-888b-73589f4a45cb) |
+| Higher iteration counts resulted in lower MAE values. **An iteration count of 200 was chosen.** | ![image](https://github.com/user-attachments/assets/392ac31c-95de-42c2-a9fe-cbf4033c76d0)|
+| Lower minimum temperature values led to lower MAE values. Beyond 0.1, the MAE value remained steady. The maximum temperature range of 10 to 500 had a similar effect on the MAE. **A minimum temperature of 0.00001 and a maximum temperature of 100 were chosen.** |![image](https://github.com/user-attachments/assets/956a27ce-a300-4ec2-adc7-59e777c2e27a)|
 
 **Decision Tree Regressor**
 | Comment | Illustration |
 | ------- | ------------ |
-| Various subsets of the training data features were utilized, leading to different MAE values. The optimal feature set identified was ***r, theta, and phi.*** | ![image](https://github.com/user-attachments/assets/db81e34a-c73a-4ffe-bc29-527f1a05327e) |
+| Various subsets of the training data features were utilized, leading to different MAE values. The optimal feature set identified was ***r, theta, and phi.*** | ![image](https://github.com/user-attachments/assets/7d2d2af9-d1ef-4a88-987b-c87f4a491316)|
 | The optimal maximum depth was found to be 20, with no further improvement observed beyond this depth. | ![image](https://github.com/user-attachments/assets/c38a35a3-c8cc-4e31-8749-613652e3913d) |
-| A **maximum feature count of 3** was observed to yield lower MAE values. | ![image](https://github.com/user-attachments/assets/d68c2bd8-3ce8-43f5-97c8-4b8d6a7c811d) |
-| Increasing the minimum samples split raised the MAE value. **A value of 2 was selected.** | ![image](https://github.com/user-attachments/assets/939a0481-0f9e-497c-ae25-8378c1b6ed9c) |
+| A **maximum feature count of 3** was observed to yield lower MAE values. |![image](https://github.com/user-attachments/assets/c3e65c9c-97ae-41c3-843f-d5546f3d5cb1)|
+| Increasing the minimum samples split raised the MAE value. **A value of 2 was selected.** | ![image](https://github.com/user-attachments/assets/bc502832-c64b-4caa-8d3b-8f8fd690d1ce)|
 
 **Multi-layer Perceptron Regressor**
 | Comment | Illustration |
 | ------- | ------------ |
-| After evaluating different hidden layer configurations, **a single hidden layer of 343 nodes was selected.** | ![image](https://github.com/user-attachments/assets/9ee4fe8b-429a-43f8-bf79-cb33035556c0) |
-| A **ReLU activation function** was chosen for the hidden layers. | ![image](https://github.com/user-attachments/assets/1155591e-0676-4268-90f3-557eaf498f3b) |
-| The **Adam solver** was selected for optimization. | ![image](https://github.com/user-attachments/assets/92541f17-2fd3-42bb-862e-9ee9184ab7f6) |
-| Minimal differences were noted across various learning rate strategies; therefore, a **constant learning rate** was used. | ![image](https://github.com/user-attachments/assets/8f4d390a-c2d7-452c-8f6f-5af7285fc5c1) |
-| An **initial learning rate of 0.001** was found to yield the smallest MAE value. | ![image](https://github.com/user-attachments/assets/e887b0b1-0c5c-46b3-ae8f-b05f99d4d7c6) |
-| Smaller batch sizes contributed less to the MAE value, with **a batch size of 5 being selected.** | ![image](https://github.com/user-attachments/assets/52ba3b47-3c73-41fd-852f-e5f0b850684e) |
+| After evaluating different hidden layer configurations, **a single hidden layer of 343 nodes was selected.** | ![image](https://github.com/user-attachments/assets/c5552c52-e5e1-4aec-b162-ab069f63487e)|
+| A **ReLU activation function** was chosen for the hidden layers. | ![image](https://github.com/user-attachments/assets/bff182b5-3f53-48d9-9ffa-a33dd4c66dbe)|
+| The **Adam solver** was selected for optimization. | ![image](https://github.com/user-attachments/assets/9d80ac97-9996-4711-88e5-63b2ad858339)|
+| Minimal differences were noted across various learning rate strategies; therefore, a **constant learning rate** was used. | ![image](https://github.com/user-attachments/assets/6e361bbe-f1c3-413b-b586-f1e8fcf952a7)|
+| An **initial learning rate of 0.001** was found to yield the smallest MAE value. |![image](https://github.com/user-attachments/assets/609c3358-13a8-4ef4-bdc4-b703e31cd701) |
+| Smaller batch sizes contributed less to the MAE value, with **a batch size of 5 being selected.** | ![image](https://github.com/user-attachments/assets/53084e2a-1c17-4f38-bdb6-856b36302358)|
 
 
 ### Comparison of Posture and Position Errors
@@ -149,12 +149,12 @@ Upon determining the hyperparameter combinations that achieved satisfactory MAE 
 Table 4: Comparison of Posture and Position Errors
 | Name | MAE  in meters | Robot Posture |
 | :---: | :---: | ----- |
-| GA | 0.062 | ![image](https://github.com/user-attachments/assets/ffb0a9d7-adb2-4eab-b34e-e43b73360ce2) |
-| DE | 0.006 | ![image](https://github.com/user-attachments/assets/5affed53-c303-4088-b50c-a6c8a2d79bff) |
-| PSO | 0.0 | ![image](https://github.com/user-attachments/assets/c9d3a2a3-357f-4b21-a50c-fb178809da36) |
-| SA | 0.014 | ![image](https://github.com/user-attachments/assets/98cf8ccb-d1ba-474d-8e53-5bde4895cf1d) |
-| DT | 0.315 | ![image](https://github.com/user-attachments/assets/b6861dd4-d5de-47f5-b49c-bf6813c158b8) |
-| MLP | 1.316 | ![image](https://github.com/user-attachments/assets/f185b515-5e25-41e3-bf76-33cd7491b2bb) |
+| GA | 0.062 |![image](https://github.com/user-attachments/assets/a00df6ca-66a1-41ca-98ef-e9f2dcc5e540)|
+| DE | 0.006 | ![image](https://github.com/user-attachments/assets/1ac33fb3-92dd-4a69-9b58-0bdd958f722b)|
+| PSO | 0.0 | ![image](https://github.com/user-attachments/assets/9467dead-5549-49f9-a34d-0c45ae6d3445)|
+| SA | 0.014 |![image](https://github.com/user-attachments/assets/f15cd1f5-7941-431d-a4f9-a611943c837c)|
+| DT | 0.315 | ![image](https://github.com/user-attachments/assets/5b8a5949-4991-49df-9522-912c5b323c94)|
+| MLP | 1.316 | ![image](https://github.com/user-attachments/assets/265d79bf-ac26-4f70-9636-122febb8d5d2)|
 
 ## CONCLUSION AND DISCUSSION
 The Particle Swarm Optimization (PSO) strategy demonstrated superior performance, achieving a Mean Absolute Error (MAE) value approaching zero. This was followed by Differential Evolution (DE) with an MAE of 0.006, Simulated Annealing (SA) at 0.014, Genetic Algorithms (GA) with 0.062, Decision Tree (DT) at 0.315, and finally, Multi-layer Perceptron (MLP) with an MAE of 1.316. Despite the MLP exhibiting the highest MAE, it produced a smoother trajectory for the robot arm compared to the other methods. The PSO solution closely followed in terms of smoothness, whereas the SA solution resulted in the most angular path.
